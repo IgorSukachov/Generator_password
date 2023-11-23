@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f8f8f8;
+}
+
+.wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputBox {
+    position: relative;
+    width: 450px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #333;
+}
+
+input {
+    display: inline-flex;
+    position: relative;
+    width: 90%;
+    height: 60px;
+    border: none;
+    margin: 15px 0 20px;
+    background: transparent;
+    outline: none;
+    padding: 0 20px;
+    font-size: 24px;
+    letter-spacing: 4px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #333;
+    box-shadow: -4px -4px 10px rgba(255,255,255,1,),
+                inset 4px 4px 10px rgba(0,0,0,0.05),
+                inset-4px -4px 10px rgba(255,255,255,1,),
+                4px 4px 10px rgba(0,0,0,0.05);
+}
+
+input::placeholder {
+    letter-spacing: 0px;
+}
+
+#btn {
+    position: relative;
+    cursor: pointer;
+    color: #fff;
+    background: #333;
+    font-size: 24px;
+    display: inline-block;
+    padding: 10px 15px;
+    border-radius: 8px;
+}
+
+#btn:active {
+    background: #9c27b0;
+}
+
+.img {
+    display: inline-flex;
+    position: relative;
+    width: 48px;
+    height: 48px;
+    border: 1px solid black;
+    border-radius: 50%;
+    z-index: 2;
+    background: transparent;
+    transition: border 0.5s;
+    opacity: 0.4;
+}
+
+.img::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 10px;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    z-index: 1;
+    background: #fff;
+    transition: border 0.5s;
+}
+
+.img::after {
+    content: '';
+    position: absolute;
+    top: 11px;
+    left: 16px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 1px solid black;
+    transition: border 0.5s;
+}
+
+.img:hover {
+    background: #9c27b0;
+    border: 1px solid #fff;
+    opacity: 1;
+}
+
+.alertBox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #9c27b0;
+    color: #fff;
+    text-align: center;
+    font-size: 4em;
+    display: none;
+    z-index: 3;
+}
+
+.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
